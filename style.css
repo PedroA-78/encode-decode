@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --main-color: #0a3871;
+}
+
+
+body{
+    background-color: #F3F5FC;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* INDEX HEADER */
+
+header {
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+header img {
+    width: 96px;
+}
+
+/* INDEX MAIN */
+    
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* INPUT */
+
+.in {
+    margin: 56px 0;
+}
+
+.in textarea {
+    font-family: 'Roboto';
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 393px;
+    border: none;
+    font-size: 64px;
+    color: var(--main-color);
+    resize: none;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+}
+
+.in textarea::placeholder {
+    color: var(--main-color);
+}
+
+.in span i {
+    display: inline-block;
+    padding: 2px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    background-color: #444;
+}
+
+.in span {
+    font-size: 36px;
+}
+
+/* BUTTONS */
+
+.encode, .decode {
+    margin-bottom: 32px;
+    width: 100%;
+    height: 104px;
+    font-size: 48px;
+    color: white;
+    letter-spacing: 1.5px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 40px;
+    transition: ease-in-out 200ms;
+    cursor: pointer;
+}
+
+.decode {
+    color: var(--main-color);
+    background-color: transparent;
+}
+
+.encode:hover, .decode:hover {
+    transform: scale(1.01);
+}
+
+/* OUTPUT */
+
+.out {
+    min-height: 300px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.text {
+    width: 100%;
+    font-size: 64px;
+    word-break: break-word;
+    color: var(--main-color);
+    box-sizing: border-box;
+}
+
+.out.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.out.full .message {
+    display: none;
+}
+
+.message p:first-child {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #343440;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.message p:last-child {
+    margin: 24px;
+    color: #495057;
+    word-break: keep-all;
+    font-size: 48px;
+    text-align: center;
+}
+
+.out.empty .copy {
+    display: none;
+}
+
+.out.full .copy {
+    margin: 40px 0;
+    width: 100%;
+    height: 104px;
+    font-size: 48px;
+    color: var(--main-color);
+    letter-spacing: 1.5px;
+    background-color: white;
+    border: 2px solid var(--main-color);
+    border-radius: 40px;
+    transition: ease-in-out 200ms;
+    cursor: pointer;
+}
+
+.copy:hover {
+    transform: scale(1.01);
+}
+
