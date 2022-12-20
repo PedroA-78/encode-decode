@@ -51,7 +51,15 @@ function changeClass(act){
 }
 
 function copy(){
-    navigator.clipboard.writeText(output.textContent)
+    let copyText = output.textContent
+    let tempInput = document.createElement("input")
+    tempInput.type = "text"
+    tempInput.value = copyText
+    document.body.appendChild(tempInput)
+    tempInput.select()
+    document.execCommand("Copy")
+    document.body.removeChild(tempInput)
+
     alert("texto copiado com sucesso")
 }
 
