@@ -168,6 +168,30 @@ main {
     color: white;
 }
 
+/* INDEX FOOTER */
+.contact ul {
+    width: 90%;
+    margin: 24px auto;
+    text-align: center;
+}
+.contact ul li {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.contact ul li svg {
+    width: 40px;
+    transition: ease-in-out 200ms;
+}
+
+.contact ul li svg path {
+    fill: var(--main-color);
+}
+
+.contact ul li svg:hover {
+    transform: scale(1.1);
+}
+
 /* RESPONSIVE CSS */
 
 @media screen and (min-width: 768px) {
@@ -237,6 +261,10 @@ main {
         transform: translateX(-50%);
         box-sizing: border-box;
         transition: ease-in-out 200ms;
+    }
+
+    .contact ul {
+        margin: 32px 0;
     }
 }
 
