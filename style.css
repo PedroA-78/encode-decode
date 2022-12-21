@@ -32,6 +32,7 @@ main {
 /* INPUT */
 
 .in {
+    height: 100%;
     margin: 24px 0;
 }
 
@@ -129,7 +130,7 @@ main {
     display: none;
 }
 
-.message p:first-child {
+.message p:nth-child(2) {
     text-align: center;
     letter-spacing: 1.5px;
     color: #343440;
@@ -137,10 +138,15 @@ main {
     font-weight: bold;
 }
 
+.message img {
+    display: none;
+}
+
 .message p:last-child {
     margin: 16px;
     color: #495057;
     word-break: keep-all;
+    hyphens: none;
     font-size: 20px;
     text-align: center;
 }
@@ -261,6 +267,10 @@ main {
         transform: translateX(-50%);
         box-sizing: border-box;
         transition: ease-in-out 200ms;
+    }
+
+    .message img {
+        display: block;
     }
 
     .contact ul {

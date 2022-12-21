@@ -72,7 +72,7 @@ let keys = {
     u: "ufat"
 }
 let output = document.querySelector('.text')
-let messageModel = '<div class="message"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar</p></div>'
+let messageModel = '<div class="message"><img src="./imgs/Girl.svg"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar</p></div>'
 
 let btnEncode = document.querySelector(".encode")
 btnEncode.onclick = encode;
