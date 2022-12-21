@@ -1,6 +1,6 @@
 function grow(){
     textArea.parentNode.style.minHeight = textArea.parentNode.clientHeight + "px";
-    textArea.style.height = "389px"; 
+    textArea.style.height = "194px"; 
     textArea.style.height = (textArea.scrollHeight)+"px";
     textArea.parentNode.style.minHeight = 0;
 }
@@ -59,8 +59,6 @@ function copy(){
     tempInput.select()
     document.execCommand("Copy")
     document.body.removeChild(tempInput)
-
-    alert("texto copiado com sucesso")
 }
 
 let textArea = document.querySelector("textarea")

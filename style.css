@@ -13,41 +13,44 @@ body{
 /* INDEX HEADER */
 
 header {
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
-    padding: 24px 0;
+    padding: 16px 0;
 }
 
 header img {
-    width: 96px;
+    width: 40px;
 }
 
 /* INDEX MAIN */
     
 main {
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
 }
 
 /* INPUT */
 
 .in {
-    margin: 56px 0;
+    margin: 24px 0;
 }
 
 .in textarea {
     font-family: 'Roboto';
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    padding: 0;
     width: 100%;
-    height: 393px;
+    height: 194px;
     border: none;
-    font-size: 64px;
+    font-size: 32px;
+    hyphens: auto;
     color: var(--main-color);
     resize: none;
     overflow: hidden;
     outline: none;
     background-color: transparent;
+    box-sizing: border-box;
 }
 
 .in textarea::placeholder {
@@ -66,47 +69,52 @@ main {
 }
 
 .in span {
-    font-size: 36px;
+    font-size: 16px;
 }
 
 /* BUTTONS */
 
+.buttons {
+    display: block;
+}
+
 .encode, .decode {
-    margin-bottom: 32px;
     width: 100%;
-    height: 104px;
-    font-size: 48px;
+    height: 64px;
+    font-size: 24px;
     color: white;
     letter-spacing: 1.5px;
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
-    border-radius: 40px;
+    border-radius: 24px;
     transition: ease-in-out 200ms;
     cursor: pointer;
 }
 
 .decode {
+    margin-top: 16px;
     color: var(--main-color);
     background-color: transparent;
 }
 
 .encode:hover, .decode:hover {
-    transform: scale(1.01);
+    transform: scale(1.015);
 }
 
 /* OUTPUT */
 
 .out {
-    min-height: 300px;
+    margin: 24px 0;
     background-color: white;
     border-radius: 24px;
-    padding: 24px;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
 .text {
     width: 100%;
-    font-size: 64px;
-    word-break: break-word;
+    font-size: 32px;
+    hyphens: auto;
     color: var(--main-color);
     box-sizing: border-box;
 }
@@ -122,20 +130,18 @@ main {
 }
 
 .message p:first-child {
-    width: 800px;
-    margin: 0 auto;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: #343440;
-    font-size: 64px;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .message p:last-child {
-    margin: 24px;
+    margin: 16px;
     color: #495057;
     word-break: keep-all;
-    font-size: 48px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -144,20 +150,93 @@ main {
 }
 
 .out.full .copy {
-    margin: 40px 0;
+    margin: 24px 0 0;
     width: 100%;
-    height: 104px;
-    font-size: 48px;
+    height: 64px;
+    font-size: 24px;
     color: var(--main-color);
     letter-spacing: 1.5px;
     background-color: white;
     border: 2px solid var(--main-color);
-    border-radius: 40px;
-    transition: ease-in-out 200ms;
+    border-radius: 24px;
+    transition: background ease-in-out 200ms;
     cursor: pointer;
 }
 
-.copy:hover {
-    transform: scale(1.01);
+.out.full .copy:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* RESPONSIVE CSS */
+
+@media screen and (min-width: 768px) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px; 
+    }
+
+    .decode {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .fields {
+        min-height: 70vh;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: 1fr 80px;
+    }
+
+    .in {
+        margin: 0;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        position: relative;
+    }
+
+    .in textarea {
+        height: 100%;
+        margin-bottom: 32px;
+    }
+
+    .in span {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .out.full, .out.empty {
+        margin: 0;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        position: relative;
+    }
+
+    .buttons {
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .out.full .copy {
+        position: absolute;
+        width: 95%;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        transition: ease-in-out 200ms;
+    }
 }
 
