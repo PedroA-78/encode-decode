@@ -59,6 +59,29 @@ function copy(){
     tempInput.select()
     document.execCommand("Copy")
     document.body.removeChild(tempInput)
+
+    changeText()
+}
+
+function changeText(){
+    btnCopy.classList.add("trans")
+    setTimeout(function(){
+        btnCopy.disabled = true
+        btnCopy.textContent = "Texto copiado com sucesso!"
+        setTimeout(function(){
+            btnCopy.classList.remove("trans")
+        }, 1000)
+    }, 500)
+    setTimeout(() => {
+        btnCopy.classList.add("trans")
+    }, 2000);
+    setTimeout(function(){   
+        btnCopy.textContent = "Copiar"
+        setTimeout(function(){
+            btnCopy.classList.remove("trans")
+        }, 500)
+        btnCopy.disabled = false
+    }, 2500)
 }
 
 let textArea = document.querySelector("textarea")
@@ -72,7 +95,7 @@ let keys = {
     u: "ufat"
 }
 let output = document.querySelector('.text')
-let messageModel = '<div class="message"><img src="./imgs/Girl.svg"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar</p></div>'
+let messageModel = '<div class="message"><img src="./imgs/Girl.svg"><p>Nenhuma mensagem encontrada</p><p>Digite um texto que você deseja criptografar ou descriptografar.</p></div>'
 
 let btnEncode = document.querySelector(".encode")
 btnEncode.onclick = encode;
