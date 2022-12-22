@@ -6,6 +6,7 @@
 
 
 body{
+    position: relative;
     background-color: #F3F5FC;
     font-family: 'Roboto', sans-serif;
 }
@@ -130,6 +131,13 @@ main {
     display: none;
 }
 
+.message {
+    width: 80%;
+    margin: 0 auto;
+    word-break: keep-all;
+    hyphens: none;
+}
+
 .message p:nth-child(2) {
     text-align: center;
     letter-spacing: 1.5px;
@@ -175,9 +183,10 @@ main {
 }
 
 /* INDEX FOOTER */
-.contact ul {
+
+.contact {
     width: 90%;
-    margin: 24px auto;
+    margin: 32px auto;
     text-align: center;
 }
 .contact ul li {
@@ -209,6 +218,20 @@ main {
 
     .decode {
         margin: 0;
+    }
+
+    .out {
+        min-height: 264px;
+        position: relative;
+    }
+
+    .out.full .copy {
+        position: absolute;
+        width: 90%;
+        display: inline-block;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -275,8 +298,8 @@ main {
         display: block;
     }
 
-    .contact ul {
-        margin: 32px 0;
+    .contact {
+        margin: 64px auto;
     }
 }
 
